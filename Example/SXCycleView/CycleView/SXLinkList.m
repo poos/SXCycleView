@@ -1,21 +1,21 @@
 //
-//  OCLinkList.m
+//  SXLinkList.m
 //  test
 //
 //  Created by n369 on 16/8/11.
 //  Copyright © 2016年 n369. All rights reserved.
 //
 
-#import "OCLinkList.h"
+#import "SXLinkList.h"
 
-@implementation OCLinkList
+@implementation SXLinkList
 
-+ (OCLinkList *)createLinkList {
-    OCLinkList *head = [[OCLinkList alloc] init];
++ (SXLinkList *)createLinkList {
+    SXLinkList *head = [[SXLinkList alloc] init];
     head.data = [NSNumber numberWithInt:0];
-    OCLinkList *ptr = head;
+    SXLinkList *ptr = head;
     for (int i=1; i<10; i++){
-        OCLinkList *node = [[OCLinkList alloc] init];
+        SXLinkList *node = [[SXLinkList alloc] init];
         node.data = [NSNumber numberWithInt:i];
         ptr.next = node;
         node.last = ptr;
@@ -26,13 +26,13 @@
     return head;
 }
 
-+ (OCLinkList *)createLinkListWithURLsArray:(NSArray *)urlArr {
-    OCLinkList *head = [[OCLinkList alloc] init];
++ (SXLinkList *)createLinkListWithURLsArray:(NSArray *)urlArr {
+    SXLinkList *head = [[SXLinkList alloc] init];
     head.data = [urlArr firstObject];
     head.index = 0;
-    OCLinkList *ptr = head;
+    SXLinkList *ptr = head;
     for (int i=1; i<urlArr.count; i++){
-        OCLinkList *node = [[OCLinkList alloc] init];
+        SXLinkList *node = [[SXLinkList alloc] init];
         node.index = i;
         node.data = [urlArr objectAtIndex:i];
         ptr.next = node;

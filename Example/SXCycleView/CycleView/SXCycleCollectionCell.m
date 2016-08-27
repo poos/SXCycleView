@@ -6,13 +6,13 @@
 //  Copyright © 2016年 n369. All rights reserved.
 //
 
-#import "CycleCollectionCell.h"
+#import "SXCycleCollectionCell.h"
 #import "UIImageView+WebCache.h"
 
 static NSString *const image = @"imageKey";
 static NSString *const title = @"titleKey";
 
-@implementation CycleCollectionCell
+@implementation SXCycleCollectionCell
 
 #pragma mark-------------set-----------------
 - (void)setCellImageIsUrlData:(NSDictionary *)dicData {

@@ -12,9 +12,9 @@
 		CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638891D71697E00D64FAB /* AppDelegate.m */; };
 		CDB6388C1D71697E00D64FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB6388B1D71697E00D64FAB /* Assets.xcassets */; };
 		CDB6388F1D71697E00D64FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB6388D1D71697E00D64FAB /* LaunchScreen.storyboard */; };
-		CDB6389D1D7169F600D64FAB /* CycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638971D7169F600D64FAB /* CycleCollectionCell.m */; };
-		CDB6389E1D7169F600D64FAB /* OCLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638991D7169F600D64FAB /* OCLinkList.m */; };
-		CDB6389F1D7169F600D64FAB /* CycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB6389B1D7169F600D64FAB /* CycleView.m */; };
+		CDB6389D1D7169F600D64FAB /* SXCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */; };
+		CDB6389E1D7169F600D64FAB /* SXLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638991D7169F600D64FAB /* SXLinkList.m */; };
+		CDB6389F1D7169F600D64FAB /* SXCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB6389B1D7169F600D64FAB /* SXCycleView.m */; };
 		CDB638A21D716A0E00D64FAB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638A11D716A0E00D64FAB /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -29,12 +29,12 @@
 		CDB6388B1D71697E00D64FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB6388E1D71697E00D64FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB638901D71697E00D64FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDB638971D7169F600D64FAB /* CycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleCollectionCell.m; sourceTree = "<group>"; };
-		CDB638981D7169F600D64FAB /* CycleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleCollectionCell.h; sourceTree = "<group>"; };
-		CDB638991D7169F600D64FAB /* OCLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCLinkList.m; sourceTree = "<group>"; };
-		CDB6389A1D7169F600D64FAB /* OCLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCLinkList.h; sourceTree = "<group>"; };
-		CDB6389B1D7169F600D64FAB /* CycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleView.m; sourceTree = "<group>"; };
-		CDB6389C1D7169F600D64FAB /* CycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleView.h; sourceTree = "<group>"; };
+		CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleCollectionCell.m; sourceTree = "<group>"; };
+		CDB638981D7169F600D64FAB /* SXCycleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleCollectionCell.h; sourceTree = "<group>"; };
+		CDB638991D7169F600D64FAB /* SXLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXLinkList.m; sourceTree = "<group>"; };
+		CDB6389A1D7169F600D64FAB /* SXLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXLinkList.h; sourceTree = "<group>"; };
+		CDB6389B1D7169F600D64FAB /* SXCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleView.m; sourceTree = "<group>"; };
+		CDB6389C1D7169F600D64FAB /* SXCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleView.h; sourceTree = "<group>"; };
 		CDB638A01D716A0E00D64FAB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CDB638A11D716A0E00D64FAB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,12 +113,12 @@
 		CDB638961D7169A600D64FAB /* CycleView */ = {
 			isa = PBXGroup;
 			children = (
-				CDB638971D7169F600D64FAB /* CycleCollectionCell.m */,
-				CDB638981D7169F600D64FAB /* CycleCollectionCell.h */,
-				CDB638991D7169F600D64FAB /* OCLinkList.m */,
-				CDB6389A1D7169F600D64FAB /* OCLinkList.h */,
-				CDB6389B1D7169F600D64FAB /* CycleView.m */,
-				CDB6389C1D7169F600D64FAB /* CycleView.h */,
+				CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */,
+				CDB638981D7169F600D64FAB /* SXCycleCollectionCell.h */,
+				CDB638991D7169F600D64FAB /* SXLinkList.m */,
+				CDB6389A1D7169F600D64FAB /* SXLinkList.h */,
+				CDB6389B1D7169F600D64FAB /* SXCycleView.m */,
+				CDB6389C1D7169F600D64FAB /* SXCycleView.h */,
 			);
 			path = CycleView;
 			sourceTree = "<group>";
@@ -244,12 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB6389D1D7169F600D64FAB /* CycleCollectionCell.m in Sources */,
+				CDB6389D1D7169F600D64FAB /* SXCycleCollectionCell.m in Sources */,
 				CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */,
 				CDB638A21D716A0E00D64FAB /* RootViewController.m in Sources */,
 				CDB638871D71697E00D64FAB /* main.m in Sources */,
-				CDB6389F1D7169F600D64FAB /* CycleView.m in Sources */,
-				CDB6389E1D7169F600D64FAB /* OCLinkList.m in Sources */,
+				CDB6389F1D7169F600D64FAB /* SXCycleView.m in Sources */,
+				CDB6389E1D7169F600D64FAB /* SXLinkList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +357,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SXCycleView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoR.SXCycleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,7 +373,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SXCycleView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoR.SXCycleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

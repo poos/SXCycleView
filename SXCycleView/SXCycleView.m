@@ -6,9 +6,9 @@
 //  Copyright © 2016年 n369. All rights reserved.
 //
 
-#import "CycleView.h"
-#import "CycleCollectionCell.h"
-#import "OCLinkList.h"
+#import "SXCycleView.h"
+#import "SXCycleCollectionCell.h"
+#import "SXLinkList.h"
 
 @interface CycleView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -18,8 +18,8 @@
 @property (nonatomic, assign) BOOL isMove;
 @property (nonatomic, assign) BOOL isLocalImage;
 @property (nonatomic, assign) NSInteger dataCount;
-@property (nonatomic, strong) OCLinkList *ptr;
-@property (nonatomic, strong) OCLinkList *nowPtr;
+@property (nonatomic, strong) SXLinkList *ptr;
+@property (nonatomic, strong) SXLinkList *nowPtr;
 @property (nonatomic, copy) ClickedImageBlock cellClickblock;
 //轮播
 @property (nonatomic, assign) NSInteger totalItemsCount;
@@ -93,7 +93,7 @@ static NSString *const title = @"titleKey";
             }
             [dataArr addObject:dic];
         }
-        _ptr = [OCLinkList createLinkListWithURLsArray:dataArr];
+        _ptr = [SXLinkList createLinkListWithURLsArray:dataArr];
         
         [self initData];
         [self createView];
@@ -119,7 +119,7 @@ static NSString *const title = @"titleKey";
     _mainView.pagingEnabled = YES;
     _mainView.showsHorizontalScrollIndicator = NO;
     _mainView.showsVerticalScrollIndicator = NO;
-    [_mainView registerClass:[CycleCollectionCell class] forCellWithReuseIdentifier:@"CycleCollectionCell"];
+    [_mainView registerClass:[SXCycleCollectionCell class] forCellWithReuseIdentifier:@"SXCycleCollectionCell"];
     _mainView.dataSource = self;
     _mainView.delegate = self;
     _mainView.scrollsToTop = NO;
@@ -146,7 +146,7 @@ static NSString *const title = @"titleKey";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CycleCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CycleCollectionCell" forIndexPath:indexPath];
+    SXCycleCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SXCycleCollectionCell" forIndexPath:indexPath];
     
     if (!_isMove) {
         _isMove = YES;
@@ -180,7 +180,7 @@ static NSString *const title = @"titleKey";
         _isMove = NO;                                                                     //重置是否移动
         [scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO]; //切换到下标1的cell
         //更新cell的值(滑动过快时候cell没有回收复用)
-        CycleCollectionCell *cell = (CycleCollectionCell *) [self.mainView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        SXCycleCollectionCell *cell = (SXCycleCollectionCell *) [self.mainView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
         if (_isLocalImage) {
             [cell setCellData:_ptr.data];
         } else {

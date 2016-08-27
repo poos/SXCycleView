@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SXCycleView"
-  s.version      = "0.1.0"
+  s.version      = "1.0.0"
   s.summary      = "you can create a cycleview for you app"
   #s.description  = <<-DESC
   #                  DESC

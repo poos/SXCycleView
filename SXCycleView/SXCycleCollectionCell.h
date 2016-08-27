@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CycleCollectionCell : UICollectionViewCell
+@interface SXCycleCollectionCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
