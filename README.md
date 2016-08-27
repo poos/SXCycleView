@@ -2,7 +2,7 @@
 
 ![view](https://github.com/poos/SXCycleView/blob/master/Untitled.gif "")
 
-###a. pod 'SXCycleView', '~> 1.0.0'
+###a. pod 'SXCycleView'
 else you can Download to use it, look Example for help
 
 ###b. import SXCycleView.h
