@@ -10,7 +10,7 @@
 #import "SXCycleCollectionCell.h"
 #import "SXLinkList.h"
 
-@interface CycleView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SXCycleView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *mainView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
@@ -30,7 +30,7 @@
 static NSString *const image = @"imageKey";
 static NSString *const title = @"titleKey";
 
-@implementation CycleView
+@implementation SXCycleView
 
 #pragma mark-------------------set方法----
 - (void)setAutoScroll:(BOOL)autoScroll {

@@ -10,7 +10,7 @@
 
 typedef void (^ClickedImageBlock)(NSInteger currentIndex);
 
-@interface CycleView : UITableViewCell
+@interface SXCycleView : UITableViewCell
 
 @property (nonatomic, assign) BOOL autoScroll;                //是否自动滚动,默认Yes
 @property (nonatomic, assign) CGFloat autoScrollTimeInterval; //自动滚动间隔时间,默认5s
