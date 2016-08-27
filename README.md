@@ -1,9 +1,8 @@
 # SXCycleView
 
-![view](https://github.com/poos/SXCycleView/blob/master/Untitled.gif "")
+#图片效果可以点开上边的Untitled.gif查看,太晃眼了
 
 ###a. pod 'SXCycleView'
-else you can Download to use it, look Example for help
 
 ###b. import SXCycleView.h
 
@@ -14,3 +13,4 @@ else you can Download to use it, look Example for help
                                                 clickBlock:^(NSInteger currentIndex) {
                                                     NSLog(@"%ld", currentIndex);
                                                 }]];
+```
