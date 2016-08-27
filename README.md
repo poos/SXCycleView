@@ -1,4 +1,4 @@
-# SXCycleView
+# SXCycleView 轮播图
 
 ####图片效果可以点开上边的Untitled.gif查看,太晃眼了所以没有往下边放
 
