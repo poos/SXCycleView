@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0F40DF2CF1D16543A6762BF6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A05A6ED48B99A976918247 /* libPods.a */; };
+		CD27B2A41D71A48600ABFA0D /* SXCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */; };
+		CD27B2A51D71A48600ABFA0D /* SXCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B2A11D71A48600ABFA0D /* SXCycleView.m */; };
+		CD27B2A61D71A48600ABFA0D /* SXLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B2A31D71A48600ABFA0D /* SXLinkList.m */; };
 		CDB638871D71697E00D64FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638861D71697E00D64FAB /* main.m */; };
 		CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638891D71697E00D64FAB /* AppDelegate.m */; };
 		CDB6388C1D71697E00D64FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB6388B1D71697E00D64FAB /* Assets.xcassets */; };
 		CDB6388F1D71697E00D64FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB6388D1D71697E00D64FAB /* LaunchScreen.storyboard */; };
-		CDB6389D1D7169F600D64FAB /* SXCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */; };
-		CDB6389E1D7169F600D64FAB /* SXLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638991D7169F600D64FAB /* SXLinkList.m */; };
-		CDB6389F1D7169F600D64FAB /* SXCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB6389B1D7169F600D64FAB /* SXCycleView.m */; };
 		CDB638A21D716A0E00D64FAB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638A11D716A0E00D64FAB /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +22,12 @@
 		50A05A6ED48B99A976918247 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D55A43B238E121886AAEC87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		899E874089383F6A8AAFBEA9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CD27B29E1D71A48600ABFA0D /* SXCycleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleCollectionCell.h; sourceTree = "<group>"; };
+		CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleCollectionCell.m; sourceTree = "<group>"; };
+		CD27B2A01D71A48600ABFA0D /* SXCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleView.h; sourceTree = "<group>"; };
+		CD27B2A11D71A48600ABFA0D /* SXCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleView.m; sourceTree = "<group>"; };
+		CD27B2A21D71A48600ABFA0D /* SXLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXLinkList.h; sourceTree = "<group>"; };
+		CD27B2A31D71A48600ABFA0D /* SXLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXLinkList.m; sourceTree = "<group>"; };
 		CDB638821D71697E00D64FAB /* SXCycleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXCycleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB638861D71697E00D64FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDB638881D71697E00D64FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,12 +35,6 @@
 		CDB6388B1D71697E00D64FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB6388E1D71697E00D64FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB638901D71697E00D64FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleCollectionCell.m; sourceTree = "<group>"; };
-		CDB638981D7169F600D64FAB /* SXCycleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleCollectionCell.h; sourceTree = "<group>"; };
-		CDB638991D7169F600D64FAB /* SXLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXLinkList.m; sourceTree = "<group>"; };
-		CDB6389A1D7169F600D64FAB /* SXLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXLinkList.h; sourceTree = "<group>"; };
-		CDB6389B1D7169F600D64FAB /* SXCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleView.m; sourceTree = "<group>"; };
-		CDB6389C1D7169F600D64FAB /* SXCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleView.h; sourceTree = "<group>"; };
 		CDB638A01D716A0E00D64FAB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CDB638A11D716A0E00D64FAB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +68,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD27B29D1D71A48600ABFA0D /* SXCycleView */ = {
+			isa = PBXGroup;
+			children = (
+				CD27B29E1D71A48600ABFA0D /* SXCycleCollectionCell.h */,
+				CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */,
+				CD27B2A01D71A48600ABFA0D /* SXCycleView.h */,
+				CD27B2A11D71A48600ABFA0D /* SXCycleView.m */,
+				CD27B2A21D71A48600ABFA0D /* SXLinkList.h */,
+				CD27B2A31D71A48600ABFA0D /* SXLinkList.m */,
+			);
+			path = SXCycleView;
+			sourceTree = "<group>";
+		};
 		CDB638791D71697E00D64FAB = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +102,7 @@
 		CDB638841D71697E00D64FAB /* SXCycleView */ = {
 			isa = PBXGroup;
 			children = (
-				CDB638961D7169A600D64FAB /* CycleView */,
+				CD27B29D1D71A48600ABFA0D /* SXCycleView */,
 				CDB638881D71697E00D64FAB /* AppDelegate.h */,
 				CDB638891D71697E00D64FAB /* AppDelegate.m */,
 				CDB638A01D716A0E00D64FAB /* RootViewController.h */,
@@ -108,19 +121,6 @@
 				CDB638861D71697E00D64FAB /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CDB638961D7169A600D64FAB /* CycleView */ = {
-			isa = PBXGroup;
-			children = (
-				CDB638971D7169F600D64FAB /* SXCycleCollectionCell.m */,
-				CDB638981D7169F600D64FAB /* SXCycleCollectionCell.h */,
-				CDB638991D7169F600D64FAB /* SXLinkList.m */,
-				CDB6389A1D7169F600D64FAB /* SXLinkList.h */,
-				CDB6389B1D7169F600D64FAB /* SXCycleView.m */,
-				CDB6389C1D7169F600D64FAB /* SXCycleView.h */,
-			);
-			path = CycleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB6389D1D7169F600D64FAB /* SXCycleCollectionCell.m in Sources */,
+				CD27B2A61D71A48600ABFA0D /* SXLinkList.m in Sources */,
 				CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */,
+				CD27B2A51D71A48600ABFA0D /* SXCycleView.m in Sources */,
+				CD27B2A41D71A48600ABFA0D /* SXCycleCollectionCell.m in Sources */,
 				CDB638A21D716A0E00D64FAB /* RootViewController.m in Sources */,
 				CDB638871D71697E00D64FAB /* main.m in Sources */,
-				CDB6389F1D7169F600D64FAB /* SXCycleView.m in Sources */,
-				CDB6389E1D7169F600D64FAB /* SXLinkList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,9 +2,9 @@
 //  SXLinkList.h
 //  test
 //
-//  Created by n369 on 16/8/11.
-//  Copyright © 2016年 n369. All rights reserved.
-//
+//  Created by xiaoR
+//  github地址:https://github.com/poos/SXCycleView
+//  无线轮播 任何问题可以前往留言
 
 #import <Foundation/Foundation.h>
 
