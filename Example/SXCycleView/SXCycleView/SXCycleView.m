@@ -4,7 +4,7 @@
 //
 //  Created by xiaoR
 //  github地址:https://github.com/poos/SXCycleView
-//  无线轮播 任何问题可以前往留言
+//  无限轮播 任何问题可以前往留言
 
 #import "SXCycleView.h"
 #import "SXCycleCollectionCell.h"
@@ -57,20 +57,20 @@ static NSString *const title = @"titleKey";
 }
 
 #pragma mark-------------------初始化方法----
-- (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr clickBlock:(ClickedImageBlock)block {
-    return [self initWithFrame:frame isLocalImage:YES imgArrs:imageArr titArr:nil clickBlock:block];
+//image数组初始化
++ (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr clickBlock:(ClickedImageBlock)block {
+    return [[self alloc] initWithFrame:frame isLocalImage:YES imgArrs:imageArr titArr:nil clickBlock:block];
+}
++ (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block {
+    return [[self alloc] initWithFrame:frame isLocalImage:YES imgArrs:imageArr titArr:titleArr clickBlock:block];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block {
-    return [self initWithFrame:frame isLocalImage:YES imgArrs:imageArr titArr:titleArr clickBlock:block];
+//url数组初始化
++ (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr clickBlock:(ClickedImageBlock)block {
+    return [[self alloc] initWithFrame:frame isLocalImage:NO imgArrs:urlArr titArr:nil clickBlock:block];
 }
-
-- (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr clickBlock:(ClickedImageBlock)block {
-    return [self initWithFrame:frame isLocalImage:NO imgArrs:urlArr titArr:nil clickBlock:block];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block {
-    return [self initWithFrame:frame isLocalImage:NO imgArrs:urlArr titArr:titleArr clickBlock:block];
++ (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block {
+    return [[self alloc] initWithFrame:frame isLocalImage:NO imgArrs:urlArr titArr:titleArr clickBlock:block];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame isLocalImage:(BOOL)isLocalImage imgArrs:(NSArray *)urlArr titArr:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block {

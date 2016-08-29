@@ -4,7 +4,7 @@
 //
 //  Created by xiaoR
 //  github地址:https://github.com/poos/SXCycleView
-//  无线轮播 任何问题可以前往留言
+//  无限轮播 任何问题可以前往留言
 
 #import "SXCycleCollectionCell.h"
 #import "UIImageView+WebCache.h"
