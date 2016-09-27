@@ -16,6 +16,6 @@
                 clickBlock:^(NSInteger currentIndex) {
                     NSLog(@"%ld", currentIndex);
                 }]];
-``
+```
 
 任何问题欢迎留言
