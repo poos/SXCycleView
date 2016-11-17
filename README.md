@@ -20,9 +20,12 @@
 
 任何问题欢迎留言
 
+![轮播图](https://github.com/poos/SXCycleView/blob/master/Untitled.gif "轮播图")
+ 
+  
+   
 
-
-###使用collectionView可以很方便的创建轮播图,并且利用collectionViewCell的复用,很方便的管理,原理也很简单
+使用collectionView可以很方便的创建轮播图,并且利用collectionViewCell的复用,很方便的管理,原理也很简单
 
 a,把轮播图的元数据扩大,123123123...123123123
 
