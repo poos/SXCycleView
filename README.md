@@ -1,6 +1,6 @@
 # SXCycleView 轮播图
 
-####图片效果可以点开上边的Untitled.gif查看,太晃眼了所以没有往下边放
+####博客文章地址https://my.oschina.net/bieshixuan/blog/789622
 
 ###a. 使用pod 'SXCycleView' 导入最新包
 或者下载文件,SXCycleView文件夹下的文件加入工程即可,注意工程用到了SDWebImage
