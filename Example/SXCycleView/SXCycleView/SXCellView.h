@@ -1,18 +1,20 @@
 //
-//  CycleCollectionCell.h
-//  test
+//  SXCellView.h
+//  SXCycleView
 //
-//  Created by xiaoR
-//  github地址:https://github.com/poos/SXCycleView
-//  无限轮播 任何问题可以前往留言
+//  Created by n369 on 2017/2/27.
+//  Copyright © 2017年 SX. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
-@interface SXCycleCollectionCell : UICollectionViewCell
+@interface SXCellView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 
+
 - (void)setCellImageIsUrlData:(NSDictionary *)dicData;
 - (void)setCellData:(NSDictionary *)dicData;
+
 @end

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F40DF2CF1D16543A6762BF6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A05A6ED48B99A976918247 /* libPods.a */; };
-		CD27B2A41D71A48600ABFA0D /* SXCycleCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */; };
 		CD27B2A51D71A48600ABFA0D /* SXCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B2A11D71A48600ABFA0D /* SXCycleView.m */; };
 		CD27B2A61D71A48600ABFA0D /* SXLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = CD27B2A31D71A48600ABFA0D /* SXLinkList.m */; };
+		CD40B2A51E64070300BCAB48 /* SXCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD40B2A41E64070300BCAB48 /* SXCellView.m */; };
 		CDB638871D71697E00D64FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638861D71697E00D64FAB /* main.m */; };
 		CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB638891D71697E00D64FAB /* AppDelegate.m */; };
 		CDB6388C1D71697E00D64FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB6388B1D71697E00D64FAB /* Assets.xcassets */; };
@@ -22,12 +22,12 @@
 		50A05A6ED48B99A976918247 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D55A43B238E121886AAEC87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		899E874089383F6A8AAFBEA9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CD27B29E1D71A48600ABFA0D /* SXCycleCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleCollectionCell.h; sourceTree = "<group>"; };
-		CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleCollectionCell.m; sourceTree = "<group>"; };
 		CD27B2A01D71A48600ABFA0D /* SXCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCycleView.h; sourceTree = "<group>"; };
 		CD27B2A11D71A48600ABFA0D /* SXCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCycleView.m; sourceTree = "<group>"; };
 		CD27B2A21D71A48600ABFA0D /* SXLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXLinkList.h; sourceTree = "<group>"; };
 		CD27B2A31D71A48600ABFA0D /* SXLinkList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXLinkList.m; sourceTree = "<group>"; };
+		CD40B2A31E64070300BCAB48 /* SXCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCellView.h; sourceTree = "<group>"; };
+		CD40B2A41E64070300BCAB48 /* SXCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCellView.m; sourceTree = "<group>"; };
 		CDB638821D71697E00D64FAB /* SXCycleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXCycleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB638861D71697E00D64FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDB638881D71697E00D64FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 		CD27B29D1D71A48600ABFA0D /* SXCycleView */ = {
 			isa = PBXGroup;
 			children = (
-				CD27B29E1D71A48600ABFA0D /* SXCycleCollectionCell.h */,
-				CD27B29F1D71A48600ABFA0D /* SXCycleCollectionCell.m */,
+				CD40B2A31E64070300BCAB48 /* SXCellView.h */,
+				CD40B2A41E64070300BCAB48 /* SXCellView.m */,
 				CD27B2A01D71A48600ABFA0D /* SXCycleView.h */,
 				CD27B2A11D71A48600ABFA0D /* SXCycleView.m */,
 				CD27B2A21D71A48600ABFA0D /* SXLinkList.h */,
@@ -157,7 +157,7 @@
 				TargetAttributes = {
 					CDB638811D71697E00D64FAB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H4PQW37M3H;
+						DevelopmentTeam = TJ56QRL59S;
 					};
 				};
 			};
@@ -246,8 +246,8 @@
 			files = (
 				CD27B2A61D71A48600ABFA0D /* SXLinkList.m in Sources */,
 				CDB6388A1D71697E00D64FAB /* AppDelegate.m in Sources */,
+				CD40B2A51E64070300BCAB48 /* SXCellView.m in Sources */,
 				CD27B2A51D71A48600ABFA0D /* SXCycleView.m in Sources */,
-				CD27B2A41D71A48600ABFA0D /* SXCycleCollectionCell.m in Sources */,
 				CDB638A21D716A0E00D64FAB /* RootViewController.m in Sources */,
 				CDB638871D71697E00D64FAB /* main.m in Sources */,
 			);
@@ -356,10 +356,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TJ56QRL59S;
 				INFOPLIST_FILE = SXCycleView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaoR.SXCycleView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NongLian.SXCycleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -372,10 +373,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TJ56QRL59S;
 				INFOPLIST_FILE = SXCycleView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaoR.SXCycleView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NongLian.SXCycleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

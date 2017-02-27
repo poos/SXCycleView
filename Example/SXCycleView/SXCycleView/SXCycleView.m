@@ -7,13 +7,16 @@
 //  无限轮播 任何问题可以前往留言
 
 #import "SXCycleView.h"
-#import "SXCycleCollectionCell.h"
+#import "SXCellView.h"
 #import "SXLinkList.h"
 
-@interface SXCycleView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SXCycleView () <UIScrollViewDelegate>
 
-@property (nonatomic, strong) UICollectionView *mainView;
-@property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
+@property (nonatomic, strong) UIScrollView *mainView;
+
+@property (nonatomic, strong) SXCellView *cellView0;
+@property (nonatomic, strong) SXCellView *cellView1;
+@property (nonatomic, strong) SXCellView *cellView2;
 
 @property (nonatomic, assign) BOOL isMove;
 @property (nonatomic, assign) BOOL isLocalImage;
@@ -109,25 +112,33 @@ static NSString *const title = @"titleKey";
 }
 
 - (void)createView {
-    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    _flowLayout.minimumLineSpacing = 0.f;
-    _flowLayout.minimumInteritemSpacing = 0.f;
-    _flowLayout.itemSize = CGSizeMake(self.bounds.size.width, self.bounds.size.height);
-    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    _mainView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) collectionViewLayout:_flowLayout];
+    _mainView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    _mainView.contentSize = CGSizeMake(self.frame.size.width * 3, self.frame.size.height);
     _mainView.backgroundColor = [UIColor clearColor];
     _mainView.pagingEnabled = YES;
     _mainView.showsHorizontalScrollIndicator = NO;
     _mainView.showsVerticalScrollIndicator = NO;
-    [_mainView registerClass:[SXCycleCollectionCell class] forCellWithReuseIdentifier:@"SXCycleCollectionCell"];
-    _mainView.dataSource = self;
     _mainView.delegate = self;
     _mainView.scrollsToTop = NO;
     [self addSubview:_mainView];
+    
+    _cellView0 = [[SXCellView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView0 data:_ptr.last];
+    [_mainView addSubview:_cellView0];
+    _cellView1 = [[SXCellView alloc] initWithFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView1 data:_ptr];
+    [_mainView addSubview:_cellView1];
+    _cellView2 = [[SXCellView alloc] initWithFrame:CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView2 data:_ptr.next];
+    [_mainView addSubview:_cellView2];
+    
     [_mainView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO];
     
     _dataCount == 1 ? [_mainView setScrollEnabled:NO] : [self setupTimer];
     _dataCount == 1 ? :[self createPageControl];
+    
+    UITapGestureRecognizer * tapAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickBlockAction)];
+    [self addGestureRecognizer:tapAction];
 }
 
 - (void)createPageControl {
@@ -139,34 +150,15 @@ static NSString *const title = @"titleKey";
     _pageControl = pageControl;
 }
 
-#pragma mark------------------ UICollectionViewDataSource
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SXCycleCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SXCycleCollectionCell" forIndexPath:indexPath];
-    
-    if (!_isMove) {
-        _isMove = YES;
-        _nowPtr = _ptr;
-    }
-    if (indexPath.row == 0) {
-        _ptr = _nowPtr.last;
-    } else if (indexPath.row == 2) {
-        _ptr = _nowPtr.next;
-    }
+- (void)controlView:(SXCellView *)cellView data:(SXLinkList *)listPoint {
     if (_isLocalImage) {
-        [cell setCellData:_ptr.data];
+        [cellView setCellData:listPoint.data];
     } else {
-        [cell setCellImageIsUrlData:_ptr.data];
+        [cellView setCellImageIsUrlData:listPoint.data];
     }
-    
-    return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)clickBlockAction {
     if (_cellClickblock) {
         _cellClickblock(_ptr.index);
     }
@@ -177,15 +169,22 @@ static NSString *const title = @"titleKey";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     //tableViewCell的复用会延缓一点点时间,手动设置以防止没有复用的时候显示错误
     if (scrollView.contentOffset.x <= 0 || scrollView.contentOffset.x >= 2 * self.bounds.size.width) {
-        _isMove = NO;                                                                     //重置是否移动
-        [scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO]; //切换到下标1的cell
-        //更新cell的值(滑动过快时候cell没有回收复用)
-        SXCycleCollectionCell *cell = (SXCycleCollectionCell *) [self.mainView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-        if (_isLocalImage) {
-            [cell setCellData:_ptr.data];
-        } else {
-            [cell setCellImageIsUrlData:_ptr.data];
+        if (!_isMove) {
+            _isMove = YES;
+            _nowPtr = _ptr;
         }
+        
+        if (scrollView.contentOffset.x <= 0) {
+            _ptr = _nowPtr.last;
+        } else {
+            _ptr = _nowPtr.next;
+        }
+        [self controlView:_cellView0 data:_ptr.last];
+        [self controlView:_cellView1 data:_ptr];
+        [self controlView:_cellView2 data:_ptr.next];
+        
+        [scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO]; //切换到下标1的cell
+        _isMove = NO;
         _pageControl.currentPage = _ptr.index;
     }
 }
