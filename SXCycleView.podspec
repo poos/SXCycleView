@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SXCycleView"
-  s.version      = "1.2.1"
+  s.version      = "1.2.3"
   s.summary      = "you can create a cycleview for you app"
   #s.description  = <<-DESC
   #                  DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/poos/SXCycleView.git", :tag => s.version.to_s }
 
-  s.source_files  = "SXCycleView/Example/SXCycleView/**/*.{h,m}"
+  s.source_files  = "Example/SXCycleView/SXCycleView/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
