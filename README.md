@@ -2,7 +2,7 @@
 
 ####博客文章地址https://my.oschina.net/bieshixuan/blog/789622
 
-####!!!因为苹果CollectionView回收机制更改,所以改用了ScrollView,更快速,更节省内存!!!
+##!!!因为苹果CollectionView回收机制更改,所以改用了ScrollView,更快速,更节省内存!!!
 
 ###a. 使用pod 'SXCycleView' 导入最新包
 或者下载文件,SXCycleView文件夹下的文件加入工程即可,注意工程用到了SDWebImage
