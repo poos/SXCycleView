@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SXCycleView"
-  s.version      = "1.2.3"
+  s.version      = "1.2.4"
   s.summary      = "you can create a cycleview for you app"
   #s.description  = <<-DESC
   #                  DESC
@@ -36,5 +36,11 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency "SDWebImage", "~> 3.8"
+
+s.subspec 'SXCycleView' do |ss|
+ss.source_files = 'Example/SXCycleView/SXCycleView/**/*.{h,m}'
+ss.public_header_files = "Example/SXCycleView/SXCycleView/**/*.h"
+ss.dependency "SDWebImage", "~> 3.8"
+end
 
 end
