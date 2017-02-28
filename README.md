@@ -4,8 +4,8 @@
 
 ##!!!因为苹果CollectionView回收机制更改,所以改用了ScrollView,更快速,更节省内存!!!
 
-###a. 使用pod 'SXCycleView' 导入最新包
-或者下载文件,SXCycleView文件夹下的文件加入工程即可,注意工程用到了SDWebImage
+###!!!a. 使用pod 导入包时候概率出现使用问题
+可以到SXCycleView文件夹下的文件加入工程即可,注意工程用到了SDWebImage
 
 
 ###b. import SXCycleView.h
