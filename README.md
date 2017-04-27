@@ -22,7 +22,7 @@
 
 任何问题欢迎留言
 
-![轮播图](https://github.com/poos/SXCycleView/blob/master/Untitled.gif "轮播图")
+![轮播图](Untitled.gif "轮播图")
  
   
    
@@ -53,3 +53,26 @@ c,处理滚动到头时候
 每次滑动结束之后就回到中间的那一张
 
 左划3个cell的数据源整体向左,右划类推
+
+## interface
+```
+@property (nonatomic, assign) BOOL autoScroll;                //是否自动滚动,默认Yes
+@property (nonatomic, assign) CGFloat autoScrollTimeInterval; //自动滚动间隔时间,默认5s
+
+/**
+ 开放的 pageControl
+ ! 可以set一个新的pageControl以替换
+ ! 亦可简单重设frame
+ ! 设置为nil即不显示
+ */
+@property (nonatomic, weak) UIPageControl *pageControl;
+
+//image数组初始化
++ (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr clickBlock:(ClickedImageBlock)block;
++ (instancetype)initWithFrame:(CGRect)frame imageArrs:(NSArray<UIImage *> *)imageArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block;
+
+//url数组初始化
++ (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr clickBlock:(ClickedImageBlock)block;
++ (instancetype)initWithFrame:(CGRect)frame imageUrlArrs:(NSArray<NSString *> *)urlArr titles:(NSArray *)titleArr clickBlock:(ClickedImageBlock)block;
+
+```
