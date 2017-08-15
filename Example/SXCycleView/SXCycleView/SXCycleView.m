@@ -123,13 +123,14 @@ static NSString *const title = @"titleKey";
     [self addSubview:_mainView];
     
     _cellView0 = [[SXCellView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView0 data:_ptr.last];
     [_mainView addSubview:_cellView0];
     _cellView1 = [[SXCellView alloc] initWithFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView1 data:_ptr];
     [_mainView addSubview:_cellView1];
     _cellView2 = [[SXCellView alloc] initWithFrame:CGRectMake(self.frame.size.width * 2, 0, self.frame.size.width, self.frame.size.height)];
+    [self controlView:_cellView2 data:_ptr.next];
     [_mainView addSubview:_cellView2];
-    
-    [self resetData];
     
     [_mainView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO];
     
@@ -147,12 +148,6 @@ static NSString *const title = @"titleKey";
     pageControl.currentPage = _ptr.index;
     [self addSubview:pageControl];
     _pageControl = pageControl;
-}
-
-- (void)resetData {
-    [self controlView:_cellView0 data:_ptr.last];
-    [self controlView:_cellView1 data:_ptr];
-    [self controlView:_cellView2 data:_ptr.next];
 }
 
 - (void)controlView:(SXCellView *)cellView data:(SXLinkList *)listPoint {
@@ -174,47 +169,36 @@ static NSString *const title = @"titleKey";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (scrollView.contentOffset.x <= 0 || scrollView.contentOffset.x >= 2 * self.bounds.size.width) {
-        if (scrollView.contentOffset.x <= 0) {
-            [self changeView:YES];
-        } else {
-            [self changeView:NO];
+        if (!_isMove) {
+            _isMove = YES;
+            _nowPtr = _ptr;
         }
+        
+        if (scrollView.contentOffset.x <= 0) {
+            _ptr = _nowPtr.last;
+        } else {
+            _ptr = _nowPtr.next;
+        }
+        [self controlView:_cellView0 data:_ptr.last];
+        [self controlView:_cellView1 data:_ptr];
+        [self controlView:_cellView2 data:_ptr.next];
+        
+        [scrollView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO]; //切换到下标1的cell
+        _isMove = NO;
+        _pageControl.currentPage = _ptr.index;
     }
-}
-
-- (void)changeView:(BOOL)isRight {
-    if (!_isMove) {
-        _isMove = YES;
-        _nowPtr = _ptr;
-    }
-    
-    if (isRight) {
-        _ptr = _nowPtr.last;
-    } else {
-        _ptr = _nowPtr.next;
-    }
-    [self resetData];
-    
-    [_mainView setContentOffset:CGPointMake(self.bounds.size.width, 0) animated:NO]; //切换到下标1的cell
-    _isMove = NO;
-    _pageControl.currentPage = _ptr.index;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (self.autoScroll) {
         [self invalidateTimer];
     }
-    scrollView.userInteractionEnabled = NO;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     if (self.autoScroll) {
         [self setupTimer];
     }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    scrollView.userInteractionEnabled = YES;
 }
 
 #pragma mark - actions
